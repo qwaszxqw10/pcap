@@ -86,7 +86,7 @@ int main()
 	char filter_exp[] = "tcp";
 	bpf_u_int32 net;
 
-	handle = pcap_open_live("en0", BUFSIZ, 1, 1000, errbuf);
+	handle = pcap_open_live("enp0s3", BUFSIZ, 1, 1000, errbuf);
 
 	pcap_compile(handle, &fp, filter_exp, 0, net);
 
